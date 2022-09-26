@@ -33,7 +33,6 @@ public class Permission implements Serializable, GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
-		// TODO Auto-generated method stub
 		return this.description;
 	}
 

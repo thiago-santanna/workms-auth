@@ -36,22 +36,22 @@ public class User implements Serializable, UserDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false, name = "user_name", unique = true)
+	@Column(name = "user_name", unique = true, nullable = false)
 	private String userName;
 
-	@Column(nullable = false, name = "password")
+	@Column(name = "password", nullable = false)
 	private String password;
 
-	@Column(nullable = false, name = "accountNonExpired")
+	@Column(name = "accountNonExpired")
 	private Boolean accountNonExpired;
 
-	@Column(nullable = false, name = "accountNonLocked")
+	@Column(name = "accountNonLocked")
 	private Boolean accountNonLocked;
 
-	@Column(nullable = false, name = "credentialsNonExpired")
+	@Column(name = "credentialsNonExpired")
 	private Boolean credentialsNonExpired;
 
-	@Column(nullable = false, name = "enabled")
+	@Column(name = "enabled")
 	private Boolean enabled;
 
 	@ManyToMany(fetch = FetchType.EAGER)
